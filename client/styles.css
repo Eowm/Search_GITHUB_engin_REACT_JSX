@@ -1,0 +1,30 @@
+.user {
+	width: 150px;
+	background-color: #8db7b3;
+	padding: 15px;
+	margin: 15px;
+	border: 1px solid #000;
+	text-align: center;
+	display: inline-block;
+}
+
+.app {
+	text-align: center;
+}
+
+.input {
+	height: 20px;
+	width: 200px;
+	margin: 10px;	
+}
+
+.img{
+	width: 100%;
+	margin: 10px auto;	
+}
+
+.name{
+	width: 100%;
+	text-decoration: none;
+	color: black;
+}

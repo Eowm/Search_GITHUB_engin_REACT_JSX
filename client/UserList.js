@@ -3,9 +3,9 @@ import ReacrDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import User from './User';
 
-class UsserList extends React.Component {
+class UserList extends React.Component {
 	get users() {
-		return.this.props.users.map(user => <User key={user.id} user={user}/>);
+		return this.props.users.map(user => <User key={user.id} user={user}/>);
 	}
 
 	render() {

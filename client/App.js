@@ -1,27 +1,9 @@
-class User extends React.Component {
-	render() {
-		return (
-			<div>
-				<img src={this.props.user.avatar_url} style={{maxWidth: '100px'}}/>
-				<a href={this.props.user.html_url} target="_blank">{this.props.user.login}</a>
-			</div>
-			)
-	}
-}
-
-class UserList extends React.Component {
-	get users() {
-		return this.props.users.map(user => <User key={user.id} user={user}/>);
-	}
-
-	render() {
-		return(
-			<div>
-				{this.users}
-			</div>
-			);
-	}
-}
+import React from 'react';
+import ReacrDOM from 'react-dom';
+import PropTypes from 'prop-types';
+import UserList from './UserList';
+import User from './User';
+import style from './styles.css';
 
 class App extends React.Component {
   constructor() {
@@ -47,7 +29,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={style.app}>
         <form onSubmit={event => this.onSubmit(event)}>
           <label htmlFor="searchText">Search by user name</label>
           <input
@@ -62,8 +44,4 @@ class App extends React.Component {
   }
 }
 
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+export default App;
